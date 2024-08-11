@@ -1,11 +1,11 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 const int maxItems = 5; // Limit of availableItems
 const int maxOrder = 20; // Limit of order
 
-string availableItems[maxItems] = { "Burger", "Fries", "Soda", "Pizza", "Salad" };
-double itemPrices[maxItems] = { 5.50, 2.75, 1.50, 8.00, 4.50 };
+string availableItems[maxItems] = { "Panadol", "Aspirin", "Claritin", "Zyrtec", "Imodium" };
+double itemPrices[maxItems] = { 5.50, 8.70, 20, 23.20, 17.30 };
 
 double wallet = 1000;
 
@@ -91,7 +91,7 @@ void Payment(int orderCount, string orderItems[], int orderQuantities[], double 
     if (payOrCancel == 'Y' || payOrCancel == 'y')
     {
         system("cls");
-        cout << "Receipt:\n";
+        cout << "Receipt:\n" << endl;
         for (int i = 0; i < orderCount; ++i)
         {
             cout << "Item Name: " << orderItems[i] << endl;
@@ -100,6 +100,7 @@ void Payment(int orderCount, string orderItems[], int orderQuantities[], double 
             cout << endl;
         }
         cout << "Total Price: $" << totalPrice << endl;
+        cout << "Your wallet remain: $" << wallet << endl;
         cout << endl;
     }
 }
